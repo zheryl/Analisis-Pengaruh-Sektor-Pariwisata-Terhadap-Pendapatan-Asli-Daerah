@@ -1,0 +1,484 @@
+---
+title: "Analisis Pengaruh Sektor Pariwisata Terhadap Pendapatan Asli Daerah (Studi kasus Provinsi Jawa Tengah tahun 2020)"
+author: "Zheryl Zabrina Hibatullah"
+date: '2022-05-22'
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    highlight: github
+    toc: true
+    number_sections: true
+---
+
+```{r include=FALSE}
+library(knitr)
+opts_chunk$set(message = FALSE)
+opts_chunk$set(warning = FALSE)
+opts_chunk$set(comment = "")
+opts_chunk$set(collapse = TRUE)
+opts_chunk$set(error = TRUE)
+opts_chunk$set(prompt = TRUE)
+opts_chunk$set(fig.align = 'center')
+```
+
+# PENDAHULUAN
+
+## Latar Belakang
+
+Bagdja dkk, (2010) menjelaskanbahwa sektor pariwisata merupakan salah satu sektor yang dapat meningkatkan pendapatan daerah. Pembangunan kepariwisataan mempunyai peranan penting dalam meningkatkan penyerapan tenaga kerja, mendorong pemerataan kesempatan berusaha, mendorong pemerataan pembangunan nasional, dan memberikan kontribusi dalam penerimaan devisa negara.Heriawan (2004) menjelaskan bahwa pemerintah sedang gencar mengembangkan sektor pariwisata karena memiliki peranan yang penting dalam perekonomian. Pengembangan pariwisata perlu dilanjutkan dan ditingkatkan melalui perluasan, pemanfaatan sumber dan potensipariwisata nasional, sehingga diharapkan mampu mendorong dan menggerakkan sektor-sektor ekonomi lainnya.Guntar (2013) menjelaskan bahwa Jawa Tengah memiliki potensi pariwisata yang berbeda dan unik serta memiliki aspek ketersediaan, baik dalam sarana danprasarana wisata yang diharapkan tersedia di sekitar kawasan wisata diantaranya prasarana umum, sarana prasarana wisata.
+
+Aktivitas pariwisata akan menciptakan lapangan pekerjaan, yang kemudian akan menciptakan upah/gaji. Feriyanto (2014)menjelaskan bahwa tenaga kerja yang dibutuhkan khususnya memiliki keterampilan atau kemampuan sehingga mampu diserap oleh suatu unit tertentu yang membutuhkan tenaga kerja. Tenaga kerja yang yang telah terserap akan menghasilkan barang atau jasa dengan jumlah yang besar. Penyerapan tenaga kerja akan menimbulkan perbedaan pada tingkat produktivitas dan kontribusi bagi pendapatan nasional.Ismayanti (2010) menjelaskan bahwa kegiatan pariwisata secara langsung maupun tidak langsung akan memberikan dampak ekonomi dan sosial bagi masyarakat sekitar. Pariwisata akan memberikan banyak pemasukan bagi daerah yang sadar akan potensinya terhadap sektor pariwisata
+
+Perkembangan sektor pariwisata diharapkan dapat menjadi sektor kunci bagi perkembangan sektor lainnya diProvinsi Jawa Tengah. Penelitian mengenai seberapa besar peranan sektor pariwisata di Jawa Tengah sangat diperlukan untuk mengetahui kemampuan sektor pariwisata dalam menyumbang kontribusinya pada perekonomian Provinsi Jawa Tengah.Perumusan masalah dari latar belakang ini adalah : Bagaimana peranan sektor pariwisata dalam permintaan antara dan permintaan akhir, pembentukan output, dan nilai tambah bruto. Bagaimana keterkaitan ke belakangdan ke depan sektor pariwisata dengan sektor-sektor lainnya. Bagaimana efek multiplier sektor pariwisata terhadap output, pendapatan dan tenaga kerja, dan bagaimana dampak pengeluaran pemerintah pada sektor pariwisata terhadap perekonomian Jawa Tengah
+
+# TINJAUAN PUSTAKA
+
+## Tinjauan Statistika
+
+### Statistika Deskriptif
+
+Menurut Sugiyono (2017:169) Analisis deskriptif merupakan statistik yang bertujuan untuk menganalisis data dengan mendeskripsikan atau membuat kesimpulan yang berlaku umum atau secara generalisasi. Terdapat berbagai cara dalam mendeskripsikan data, yang salah satunya adalah dalam bentuk ukuran-ukuran numerik dari hasil pengolahan terhadap data tersebut.
+
+### Analisis Regresi Linier
+
+#### Analisis Regresi Linier Sederhana
+
+Persamaan regresi linier sederhana merupakan suatu model persamaan yang menggambarkan hubungan antara variabel variabel bebas/independen (X) dengan satu variabel dependen/terikat(Y).
+
+Model regresi linier sederhana dapat dituliskan dalam bentuk seperti:
+
+Y = α + β X
+
+Keterangan:
+
+Y = Variable Terikat
+
+α = Konstanta
+
+β = Koefisien regresi
+
+X = Variabel bebas
+
+#### Analisis Regresi Linier Berganda
+
+Analisis regresi linier berganda merupakan regresi linier yang melibatkan lebih dari 1 variabel, yaitu satu variabel dependen/terikat (Y) serta dua ataupun lebih variabel bebas/independen (X₁, X₂,...Xn). Pemodelan regresi dalam penelitian ini sebagai berikut:
+
+Y = α + β₁ X₁ + β₂ X₂ + β~3~ X~3~ + β~4~ X~4~ + *e*
+
+Dengan keterangan :
+
+Y : Pendapatan Asli Daerah
+
+α : Konstanta
+
+β₁ : Koefisien Regresi Jumlah Hotel X₁
+
+β₂ : Koefisien Regresi Jumlah Wisatawan X₂
+
+β~3~ : Koefisien Regresi Jumlah Transportasi X~3~
+
+β~4~ : Koefisien Regresi Pendapatan Perkapita X~4~
+
+*e : error term*
+
+### Uji Asumsi Klasik
+
+Dalam pengujian asumsi klasik ini dianggap penting karena sebagai syarat uji regresi berganda. Beberapa asumsi harus terpenuhi sebelum menggunakan regresi linier berganda sebelum melakukan analisa pengaruh dari variabel yang diteliti.
+
+#### Uji Normalitas
+
+Uji normalitas dilakukan untuk mengetahui apakah pada model regresi, variabel terikat dan bebas keduanya sudah baik. Uji normalitas memiliki tujuan untuk mengetahui apakah nilai residual berdistribusi normal atau tidak, model regresi dikatakan baik jika memiliki distribusi data normal ataupun mendekati normal. Ada dua cara untuk mengetahui/mendeteksi residual berdistribusi normal/tidak yaitu melalui :
+
+1) Metode Kolmogorov Smirnov
+
+Dasar pengambilan keputusan Kolmogorov Smirnov adalah :
+
+-   Jika hasil nilai signifikansi \> 0.05, maka nilai residual berdistribusi normal.
+
+-   Jikahasil nilai signifikansi \> 0.05, maka nilai residual tidak berdistribusi normal.
+
+2) Metode Grafik P-Plot
+
+Dasar dari pengambilan keputusan dengan grafik P-Plot adalah :
+
+-   Jika data atau titik menyebar di sekitar garis diagonal dan mengikuti arah garis diagonal, maka data dikatakan berdistribusi normal.
+
+-   Jika data atau titik menyebar jauh dari arah garis diagonal atau tidak mengikuti arah garis diagonal, maka data dikatakan tidak berdistribusi secara normal.
+
+#### Uji Multikolinieritas
+
+Uji Multikolinearitas memiliki tujuan untuk mengetahui apakah model regresi ditemukan adanya korelasi antar variabel independen (bebas). Model regresi dikatakan baik yaitu tidak terjadi korelasi di antara variabel-variabel independen. Jika variabel bebas saling berkorelasi maka variabel tidak *orthogonal*.
+
+Uji Multikolinearitas dilakukan dengan melihat nilai *inflation factor* (VIF) pada model regresi, variabel yang menyatakan adanya multikolinearitas dapat dilihat dari nilai *tolerance* yang lebih kecil dari 0,1 atau nilai *Variance Inflantion Factor* (VIF) yang lebih besar dari 10. Hasil dari perhitungan nilai *tolerance* yang menunjukkan tidak adanya variabel bebas dimana memiliki nilai *tolerance* \< 10% berarti tidak ada korelasi antar variabel bebas yang nilainya \> 95%. Jika nilai VIF \< 10, maka disimpulkan terdapat multikolinearitas (Ghozali, 2016).
+
+#### Uji Heterokedastisitas
+
+Uji heteroskedastisitas bertujuan menguji apakah dalam model regresi terjadi ketidaksamaan variansi dari residual satu pengamatan ke pengamatan yang lain. Jika variansi dari residual satu ke pengematan lain tetap, maka disebut Homoskedastisitas dan jika berbeda disebut Heteroskedastisitas. Cara untuk mendeteksi heteroskedastisitas adalah dengan Uji Glejser. Hipotesis yang digunakan pada uji ini adalah sebagai berikut:
+
+H0: Model regresi tidak mengandung heteroskedastisitas
+
+H1: Model regresi mengandung heteroskedastisitas
+
+Dengan taraf signifikansi 5%, dasar pengambilan keputusan yang dapat diambil adalah sebagai berikut:
+
+1) Jika Nilai sig \> (0,05), maka terima H0. Model regresi tidak mengandung heteroskedastisitas.
+
+2) Jika Nilai sig \< (0,05), maka tolak H0. Model regresi mengandung heteroskedastisitas.
+
+#### Uji Autokorelasi
+
+Uji Autokorelasi bertujuan untuk mengetahui apakah terdapat korelasi antara kesalahan penganggu pada periode t dengan kesalahan penganggu pada periode t-1 (sebelumnya) dalam model regresi linear. Model regresi yang baik adalah regresi yang bebas daro autokorelasi. Ada berapa cara yang dapat digunakan untuk mendeteksi ada atau tidaknya autokorelasi diantaranya dengan Uji *Durbinwatson* (Ghozali, 2016).
+
+Uji ini digunakan untuk mendeteksi adanya autokorelasi diantara variabel yang dianalisis. Uji Autokorelasi yang digunakan dalam penelitian ini adalah Uji *Durbinwatson.* Berikut ini merupakan ketentuan pengambilan keputusan ada atau tidaknya autokorelasi :
+
+-   Terjadi autokorelasi positif jika Nilai sig \> 0.05.
+
+-   Tidak terjadi autokorelasi jika Nilai sig \<0 .05.
+
+### Uji Hipotesis
+
+#### Uji F (Simultan)
+
+Uji statistik F pada dasarnya menunjukkan apakah semua variabel independen yang dimasukkan dalam model mempunyai pengaruh secara bersama-sama terhadap variabel dependen (Ghozali, 2016). Untuk uji signifikansi simultan dibentuk hipotesis:
+
+1) H0 : β₁ = β₂ =... = β~k~ = 0, artinya semua variabel independen bukan merupakan penjelas yang signifikan terhadap variabel independen.
+
+2) H1 : β₁ ≠ β₂ ≠ . . ≠ β~k~ ≠ 0, artinya semua variabel independen secara simultan merupakan penjelas yang signifikan terhadap variabel independen.
+
+Menurut Ghozali (2016) menyatakan bahwa dasar pengambilan keputusannya adalah dengan menggunakan angka probabilitas signifikansi, yaitu:
+
+1) Apabila nilai signifikansi \> 0.05 maka H0 diterima.
+
+2) Apabila nilai signifikansi \< 0.05 maka H0 ditolak.
+
+#### Uji T (Parsial)
+
+Uji signifikansi Parameter Individual (Uji Statistik T) dimaksudkan untuk melihat apakah variabel secara individu mempunyai pengaruh terhadap variabel tak bebas dengan asumsi variabel bebas lainnya konstan. Kriteria pengujian sebagai berikut:
+
+1) Jika nilai signifikansi ≤ 0.05 berarti variabel independen secara individual memiliki pengaruh terhadap variabel dependen.
+
+2) Jika signifikansi ≥ 0.05 berarti variabel independen secara individual tidak memiliki pengaruh terhadap variabel dependen.
+
+#### Koefisien Determinasi
+
+Koefisien determinasi (R2) bertujuan untuk mengetahui seberapa besar kemampuan variabel independen menjelaskan variabel dependen (Ghozali, 2011). Nilai R2 *adjusted* besarnya berkisar antara lebih besar sama dengan 0 dan lebih kecil sama dengan 1. Jika semakin mendekati 1 maka model semakin baik karena apabila R2 *adjusted* sama dengan 1 berarti variabel independen berpengaruh sempurna terhadap variabel dependen (Ghozali, 2016).
+
+## Tinjauan Non-Statistika
+
+### Pendapatan Asli Daerah
+
+Menurut Abdul Halim (2004:94) Pedapatan Asli Daerah (PAD) yaitu penerimaan yang di peroleh daerah dari sumber-sumber dalam wilayahnya sendiri yang di pungut berdasarkan peraturan daerah sesuai dengan peraturan perundangundang yang berlaku. Sektor pendapatan daerah memegang peran yang sangat penting, karena melalui sektor ini dapat di lihat sejauh mana suatu daerah dapat membiayai kegiatan pemerintah dan pembangunan daerah.
+
+### Sektor Pariwisata
+
+Menurut penelitian Pleanggara 2012 industri pariwisata memiliki rantai industri yang berupa hotel, restauran, usaha wisata seperti obyek wisata, hiburan dan souvenir, usaha perjalanan wisata seperti pemandu wisata atau trevel agent yang dapat menjadi salah satu sumber PAD bagi Provinsi Jawa Tengah yang berupa pajak daerah, laba BUMD, pajak dan bukan pajak. Dalam menjamin perkembangan pariwisata secara baik dan berkelanjutan serta dapat memberikan manfaat bagi manusia dan mampu menekan dan memperkecil dampak negatif akan pengembangan pariwisata perlu dilakukan kajian yang mendalam yakni dengan melakukan penelitian terhadap semua sumberdaya pendukungnya. Sumberdaya yang dimaksud terdiri dari sumberdaya alam, sumberdaya budaya, dan sumberdaya manusia (Wardiyanta : 2006 : 47-48).
+
+## Data
+
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Kabupaten/Kota | Pendapatan Asli Daerah | Jumlah Hotel | Jumlah Wisatawan | Jumlah Transportasi | Pendapatan Perkapita |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Cilacap        | 3219631963             | 43           | 307500           | 818330              | 54.24                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Banyumas       | 3773568764             | 176          | 1325806          | 781434              | 30.28                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Purbalingga    | 2104113319             | 22           | 1376315          | 397438              | 25.2                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Banjarnegara   | 2259878404             | 46           | 937404           | 354695              | 21.38                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Kebumen        | 3044056768             | 38           | 709290           | 534564              | 20.8                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Purworejo      | 2483287920             | 17           | 483712           | 328293              | 24.26                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Wonosobo       | 2070280635             | 139          | 1169529          | 300828              | 21.49                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Magelang       | 2719200678             | 57           | 1450347          | 516960              | 25.01                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Boyolali       | 2480627139             | 18           | 117631           | 526578              | 30.84                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Klaten         | 2907327298             | 61           | 1174978          | 789339              | 31.74                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Sukoharjo      | 2401529962             | 18           | 65114            | 592169              | 40.7                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Wonogiri       | 2477910262             | 31           | 64702            | 430017              | 28.01                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Karanganyar    | 2346436745             | 199          | 883990           | 537033              | 39.82                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Sragen         | 2422886893             | 8            | 72217            | 584322              | 38.83                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Grobogan       | 2680645523             | 10           | 203928           | 612462              | 18.79                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Blora          | 2012812302             | 39           | 162451           | 399887              | 27.17                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Rembang        | 2054302198             | 15           | 854104           | 280487              | 29.39                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Pati           | 2910220672             | 25           | 510372           | 686647              | 32.74                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Kudus          | 1911471464             | 24           | 491488           | 536160              | 129.13               |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Jepara         | 2399062011             | 60           | 346900           | 656786              | 25.49                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Demak          | 2400405766             | 14           | 545857           | 564863              | 22.1                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Semarang       | 2457006194             | 209          | 1841669          | 538717              | 46.67                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Temanggung     | 1996489275             | 18           | 223805           | 299176              | 27.33                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Kendal         | 2451834514             | 25           | 433435           | 520805              | 41.9                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Batang         | 1925617426             | 10           | 679117           | 349832              | 27.02                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Pekalongan     | 2446656142             | 11           | 311040           | 415734              | 23.6                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Pemalang       | 2836842885             | 24           | 698421           | 560268              | 17.6                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Tegal          | 2905805253             | 40           | 427526           | 632854              | 22.15                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Brebes         | 3293494179             | 12           | 0                | 413109              | 23.84                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Magelang       | 1006107354             | 13           | 406956           | 399887              | 71.7                 |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Surakarta      | 1624395242             | 107          | 355235           | 562005              | 91.17                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Salatiga       | 1006404906             | 26           | 23938            | 146412              | 69.14                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Semarang       | 5319832790             | 88           | 3266931          | 1693227             | 114.2                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Pekalongan     | 1060107482             | 25           | 42443            | 197766              | 35.26                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+| Tegal          | 1298031100             | 17           | 425953           | 182612              | 55.72                |
++----------------+------------------------+--------------+------------------+---------------------+----------------------+
+
+: Data Badan Pusat Statistik Provinsi Jawa Tengah Tahun 2020
+
+# SOURCE CODE
+
+## Library yang Dibutuhkan
+
+```{r}
+library(readxl)
+library(tseries)
+library(car)
+library(lmtest)
+library(olsrr)
+```
+
+## Membangkitkan Data
+
+```{r}
+Data_fix_Komstat <- read_excel("C:/Users/UNITE GAMER/Downloads/Data fix Komstat.xlsx")
+```
+
+fungsi read_excel digunakan untuk memanggil file excel "Data Fix Komstat" dengan argumen letak lokasi file yang akan digunakan
+
+```{r}
+#Data Frame
+Y <- Data_fix_Komstat$"Pendapatan Asli Daerah"
+X1 <- Data_fix_Komstat$"Jumlah Hotel"
+X2 <- Data_fix_Komstat$"Jumlah Wisatawan"
+X3 <- Data_fix_Komstat$"Jumlah Transportasi"
+X4 <- Data_fix_Komstat$"Pendapatan Perkapita"
+Data_Pariwisata <- data.frame(Y,X1,X2,X3,X4)
+head(Data_Pariwisata)
+```
+
+Pembuatan data frame Y berasal dari Pendapatan Asli Daerah, X1 dari Jumlah Hotel, X2 dari Jumlah wisatawan, X3 dari Jumlah Transportasi, dan X4 dari Pendapatan perkapita. *Function* `head` digunakan untuk menampilkan enam data awal dengan argumen yang diisikan dalam *function* adalah "Data_Pariwisata".
+
+## Analisis
+
+### Statistika Deskriptif
+
+Function summary(Data_Pariwisata) untuk menampilkan hasil statistik deskriptif variabel Y, X1, X2, X3, dan X4.
+
+### Analisis Regresi Berganda
+
+```{r}
+#Analisis Regresi Berganda
+regresi<-lm(Y~X1+X2+X3+X4,data=Data_Pariwisata)
+summary(regresi)
+```
+
+Fungsi lm() digunakan untuk menciptakan model regresi berganda hubungan antara prediktor dan variabel respon.
+
+### Uji Asumsi Klasik
+
+#### Uji Normalitas
+
+```{r}
+#Uji Normalitas Residual
+plot(regresi,2)
+```
+
+```{r}
+#Uji Normalitas Residual
+sisa<-residuals(regresi)
+shapiro.test(sisa)
+```
+
+fungsi plot untuk menampilkan Q-Q Plot residual
+
+fungsi shspiro.test digunakan untuk uji asumsi Normalitas yaitu untuk melihat apakah data berdistribusi normal atau tidak.
+
+#### Uji Multikolinieritas
+
+```{r}
+#Uji Multikolinieritas
+vif(regresi)
+```
+
+Pengujian korelasi antar variabel independent untuk melihat tidak adanya korelasi erat antar variabel independent dapat dilakukan melihat nilai VIF dengan perintah vif() dalam package car
+
+#### Uji Heteroskedastisitas
+
+```{r}
+#Uji Heteroskedastisitas
+bptest(regresi)
+```
+
+Asumsi selanjutnya yang akan diuji adalah asumsi homoskedastisitas. Asumsi ini akan diuji dengan uji \*breusch-pagan\* dengan memanfaatkan \*function\* \`bptest\` yang ada pada \*library\* \`lmtest\`. \*Function\* ini berisi satu argumen yakni "regresi". Argumen ini merupakan objek yang akan diuji kehomogenan residual-nya.
+
+#### Uji Autokorelasi
+
+```{r}
+#Uji Non Autokorelasi
+dwtest(regresi)
+```
+
+Uji autokorelasi dilakukan untuk menguji apakah ada pengaruh dari data terdahulu kepada data yang baru, uji ini dilakukan untuk data time series, dengan menggunakan perintah dwtest() dalam package lmtest
+
+# HASIL DAN PEMBAHASAN
+
+## Statistika Deskriptif
+
++---------+------------------------+--------------+------------------+---------------------+----------------------+
+|         | Pendapatan Asli Daerah | Jumlah Hotel | Jumlah Wisatawan | Jumlah Transportasi | Pendapatan Perkapita |
++---------+------------------------+--------------+------------------+---------------------+----------------------+
+| Mean    | 2420236612             | 48.14285714  | 639717.2571      | 518334.1714         | 39.56314286          |
++---------+------------------------+--------------+------------------+---------------------+----------------------+
+| Median  | 2422886893             | 25           | 433435           | 526578              | 29.39                |
++---------+------------------------+--------------+------------------+---------------------+----------------------+
+| Minimum | 1006107354             | 8            | 0                | 146412              | 17.6                 |
++---------+------------------------+--------------+------------------+---------------------+----------------------+
+| Maximum | 5319832790             | 209          | 3266931          | 1693227             | 129.13               |
++---------+------------------------+--------------+------------------+---------------------+----------------------+
+
+Dari hasil statistik Deskriptif didapat mean variabel Pendapatan Asli Daerah sebesar 2420236612, variabel Jumlah hotel sebesar 48.14285714, variabel Jumlah wisatawan sebesar 639717.2571, variabel jumlah transportasi sebesar 518334.1714, dan variabel pendapatan perkapita sebesar 39.56314286.
+
+## Analisis Regresi Berganda
+
+### Model Regresi
+
+Dari hasil analisis diatas didapat persamaan regresi linier berganda sebagai berikut:
+
+Y = 1336730535.9796 - 333037.2518 X₁ + 136.8704 X₂ + 2809.1095X~3~ - 11224497.35 X~4~ + *e*
+
+Dengan keterangan :
+
+Y : Pendapatan Asli Daerah Y
+
+α : Konstanta
+
+β₁ : Koefisien Regresi Jumlah Hotel X₁
+
+β₂ : Koefisien Regresi Jumlah Wisatawan X₂
+
+β~3~ : Koefisien Regresi Jumlah Transportasi X~3~
+
+β~4~ : Koefisien Regresi Pendapatan Perkapita X~4~
+
+*e : error term*
+
+Persamaan regresi linier sederhana ini dapat diartikan :
+
+a.  Konstanta sebesar 1336730535.9796 yang artinya jika seluruh variabel independen bernilai 0 maka Pendapatan Asli Daerah Y nilainya sebesar 1336730535.9796.
+
+b.  Koefisien regresi linear untuk variabel Jumlah Hotel X₁ sebesar 10640.042 yang berarti jika Jumlah Hotel X₁ naik 1 satuan, maka Pendapatan Asli Daerah Y akan mengalami penurunan sebesar 333037.2518 satuan dengan asumsi variabel independen lainnya bernilai 0.
+
+c.  Koefisien regresi linear untuk variabel Jumlah Wisatawan X₂ sebesar 136.8704 yang berarti jika Jumlah Wisatawan X₂ naik 1 satuan, maka Pendapatan Asli Daerah Y akan mengalami peningkatan sebesar 136.8704 satuan dengan asumsi variabel independen lainnya bernilai 0.
+
+d.  Koefisien regresi linear untuk variabel Jumlah Transportasi X~3~ sebesar 2809.1095 yang berarti jika Jumlah Transportasi X~3~ naik 1 satuan, maka Pendapatan Asli Daerah Y akan mengalami peningkatan sebesar 2809.1095 satuan dengan asumsi variabel independen lainnya bernilai 0.
+
+e.  Koefisien regresi linear untuk variabel Pendapatan Perkapita X~4~ sebesar 11224497.35yang berarti jika Pendapatan Perkapita X~4~ naik 1 satuan, maka Pendapatan Asli Daerah Y akan mengalami penurunan sebesar 11224497.35 satuan dengan asumsi variabel independen lainnya bernilai 0.
+
+### Uji Hipotesis
+
+#### Uji F
+
+H0 : variabel Jumlah Hotel X₁, Jumlah Wisatawan X₂, Jumlah Transportasi X~3,~ dan Pendapatan Perkapita X~4~ secara simultan tidak berpengaruh terhadap variabel Pendapatan Asli Daerah Y.
+
+H1 : variabel Jumlah Hotel X₁, Jumlah Wisatawan X₂, Jumlah Transportasi X~3,~ dan Pendapatan Perkapita X~4~ secara simultan berpengaruh terhadap variabel Pendapatan Asli Daerah Y.
+
+Dalam hasil analisis uji Simultan F yang didapat pada output, diketahui bahwa perhitungan nilai signifikansi yang didapat yaitu sebesar 2.017e-11. Dari perhitungan tersebut, bisa diketahui bahwa untuk nilai signifikansi yang didapat kurang dari 0.05. Sehingga bisa diambil kesimpulan bahwa variabel Jumlah Hotel X₁, Jumlah Wisatawan X₂, Jumlah Transportasi X~3,~ dan Pendapatan Perkapita X~4~ dalam model regresi terbukti berpengaruh terhadap variabel Pendapatan Asli Daerah Y yang diteliti secara simultan
+
+#### Uji T
+
+H0 : variabel Jumlah Hotel X₁/ Jumlah Wisatawan X₂/Jumlah Transportasi X~3~/Pendapatan Perkapita X~4~ secara parsial tidak berpengaruh terhadap variabel Pendapatan Asli Daerah Y.
+
+H1 : variabel Jumlah Hotel X₁/ Jumlah Wisatawan X₂/Jumlah Transportasi X~3~/Pendapatan Perkapita X~4~ secara parsial berpengaruh terhadap variabel Pendapatan Asli Daerah Y.
+
+Dalam hasil analisis uji Parsial tyang didapat pada output, diketahui bahwa perhitungan nilai signifikansi yang didapat pada keempat variabel yaitu :
+
+-   nilai signifikansi variabel Jumlah Hotel X₁ 0.801 \> 0.05, Sehingga bisa diambil kesimpulan bahwa suatu variabel Jumlah Hotel X₁ dalam model regresi terbukti tidak berpengaruh terhadap variabel Pendapatan Asli Daerah Y yang diteliti secara parsial atau individu.
+
+-   nilai signifikansi variabel Jumlah Wisatawan X₂ 0.314 \> 0.05, Sehingga bisa diambil kesimpulan bahwa suatu variabel Jumlah Wisatawan X₂ dalam model regresi terbukti tidak berpengaruh terhadap variabel Pendapatan Asli Daerah Y yang diteliti secara parsial atau individu.
+
+-   nilai signifikansi variabel Jumlah Transportasi X~3~₁ 2.31e-10 \< 0.05, Sehingga bisa diambil kesimpulan bahwa suatu variabel Jumlah Transportasi X~3~ dalam model regresi terbukti berpengaruh terhadap variabel Pendapatan Asli Daerah Y yang diteliti secara parsial atau individu.
+
+-   nilai signifikansi variabel Pendapatan Perkapita X~4~ 6.83e-05\< 0.05, Sehingga bisa diambil kesimpulan bahwa suatu variabel Pendapatan Perkapita X~4~ dalam model regresi terbukti berpengaruh terhadap variabel Pendapatan Asli Daerah Y yang diteliti secara parsial atau individu.
+
+#### Koefisien Determinasi
+
+Berdasarkan output menunjukkan bahwa dari hasil didapatkan Nilai koefisien determinasi (R-Squared) sebesar 0.8373 . Dengan artian, variabel Jumlah Hotel X₁, Jumlah Wisatawan X₂, Jumlah Transportasi X~3,~ dan Pendapatan Perkapita X~4~ secara bersama-sama mempengaruhi variabel Pendapatan Asli Daerah Y sebesar 83.73%, sedangkan sisanya 16.27% dipengaruhi variabel lain dimana tidak dibahas penelitian ini.
+
+## Uji Asumsi Klasik
+
+1.  Uji Normalitas
+
+    ![](C:/Users/UNITE%20GAMER/AppData/Local/RStudio/tmp/paste-5EA8BC77.png){width="428"}
+
+    Berdasarkan Q-Q Plot dapat diketahui bahwa sebagaian besar titik pencar mengikuti garis sehingga distribusi yang dihasilkan adalah distribusi normal.
+
+    Hipotesis\
+    H0 : Residual berdistribusi normal\
+    H1 : Residual tidak berdistribusi normal
+
+    Berdasarkan output uji normalitas dengan saphiro wilk, didapat nilai signifikansi sebesar 0.0939 dimana nilai signifikansi tersebut lebih besar dari (0.05), maka dapat disimpulkan bahwa data dalam penelitian ini telah berdistribusi normal.
+
+2.  Uji Multikolinieritas
+
+    H0 : Terjadi multikolinieritas antara variabel independen (X1, X2, X3, X4)\
+    H1 : Tidak terjadi multikolinieritas antara variabel independen (X1, X2, X3, X4)
+
+    | X1       | X2       | X3       | X4       |
+    |----------|----------|----------|----------|
+    | 1.409016 | 2.152202 | 1.798361 | 1.163098 |
+
+    Berdasarkan hasil yang didapat nilai VIF yang didapat untuk keempat variabel kurang dari 10, maka dapat disimpulkan bahwa tidak terdapat korelasi antara variabel bebas pada model regresi dan tidak terjadi multikolinieritas antara variabel independen (X1, X2, X3, X4)
+
+3.  Uji Heteroskedastisitas
+
+    H0 : Tidak terjadi heterokedastisitas
+
+    H1 : Terjadi heterokedastisitas
+
+    Berdasarkan hasil yang didapat, diketahui nilai signifikansi sebesar 0.8069 dimana nilai tersebut lebih besar dari (0.05). Maka didapatkan kesimpulan bahwa pada model regresi tidak mengalami gejala heteroskedastisitas.
+
+4.  Uji Autokorelasi
+
+    H0 : tidak ada masalah autokorelasi
+
+    H1 : terdapat masalah autokorelasi
+
+    Berdasarkan hasil yang didapat, diketahui nilai signifikansi sebesar 0.8102 dimana nilai tersebut lebih besar dari (0.05). Maka didapatkan kesimpulan bahwa pada model regresi tidak tidak ada masalah autokorelasi.
+
+5.  <div>
+
+    # DAFTAR PUSTAKA
+
+    </div>
+
+Ghozali, Imam. 2016, "Aplikasi Multivariate dengan Program SPSS", Semarang, Badan Penerbit Universitas Diponegoro.
+
+NINGRUM, R. A. S. (2021). Analisis Pengaruh Sektor Pariwisata Terhadap Pendapatan Asli Daerah Di Provinsi Nusa Tenggara Barat (Tahun 2012-2016).
+
+Rosalina, V. (2020). *Analisis Pengaruh Sektor Pariwisata Terhadap Pendapatan Asli Daerah di Kota Yogyakarta Tahun 2000-2017* (Doctoral dissertation, Universitas Islam Indonesia).
